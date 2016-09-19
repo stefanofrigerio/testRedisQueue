@@ -1,0 +1,6 @@
+FROM python:2.7.12-alpine
+RUN apk update && \
+	apk add redis
+RUN pip install redis 
+ADD start.redis.sh /
+ENTRYPOINT ["./start.redis.sh"]

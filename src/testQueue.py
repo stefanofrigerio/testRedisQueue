@@ -10,7 +10,7 @@ import sys
 import time
 
 
-r = redis.StrictRedis(host='localhost', port=6379, db=0)
+r = redis.Redis(host='localhost', port=6379, db=0)
 r.flushdb()
 
 def id_generator(size=64, chars=string.ascii_uppercase + string.digits):
