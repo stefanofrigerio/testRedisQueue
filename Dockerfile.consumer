@@ -2,8 +2,8 @@ FROM python:2.7.12-alpine
 RUN apk update && \
 	apk add postgresql-dev && \
 	apk add gcc && \
-	apk add musl-dev && \
+	apk add musl-dev 
 RUN pip install redis && \
 	pip install psycopg2
-ADD start.consumer.sh /
-ENTRYPOINT ["./start.consumer.sh"]
+ADD ./consumer.sh /
+ENTRYPOINT ["./consumer.sh"]

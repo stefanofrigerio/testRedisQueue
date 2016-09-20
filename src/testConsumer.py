@@ -5,8 +5,8 @@ import psycopg2
 import sys
 import time
 
-r = redis.Redis(host='localhost', port=6379, db=0)
-conn_string = "host='localhost' dbname='spark' user='spark' password='spark'"
+r = redis.Redis(host='redisProducer', port=6379, db=0)
+conn_string = "host='postgres' dbname='redis' user='redis' password='redis'"
 conn = psycopg2.connect(conn_string)
 cursor = conn.cursor()
 
