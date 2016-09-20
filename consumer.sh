@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/local/bin/python /tmp/$1
+/usr/local/bin/python /tmp/testConsumer.py
